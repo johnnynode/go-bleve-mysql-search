@@ -29,7 +29,7 @@ func main() {
 
 	// 添加过滤器处理
 	beego.InsertFilter("*", beego.BeforeRouter,cors.Allow(&cors.Options{
-		AllowAllOrigins:  true,
+		AllowAllOrigins:  false,
 		AllowMethods: []string{"PUT", "GET", "DELETE", "POST", "OPTIONS"},
 		AllowHeaders: []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
 		ExposeHeaders: []string{"Content-Length", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"},
